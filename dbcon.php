@@ -6,11 +6,11 @@
     $dbname = 'xogns0520';  # DATABASE 이름
 
 
-    $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
+    $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES euckr');
 
     try {
 
-        $con = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8",$username, $password);
+        $con = new PDO("mysql:host={$host};dbname={$dbname};charset=euckr",$username, $password);
     } catch(PDOException $e) {
 
         die("Failed to connect to the database: " . $e->getMessage());
